@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">餐廳管理</string>
+
+  <string name="label_restaruant">-- 我的餐廳管理 --</string>
+  <string name="edit_place_description">餐廳描述&#8230;</string>
+  <string name="res_type">型態</string>
+  <string name="res_type_chinese">中餐</string>
+  <string name="res_type_western">西餐</string>
+  <string name="res_type_japanese">日式</string>
+  <string name="add_button">新增</string>
+  <string name="update_button">更新</string>
+  <string name="menu_edit">新增/編輯</string>
+  <string name="str_update_at">更新時間：</string>
+</resources>
