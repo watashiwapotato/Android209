@@ -11,21 +11,25 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 @Dao
-public interface PlaceDataAccessObject
-{
-  // 1. TO-DO
-  LiveData<List<Places>> loadAllPlaces();
+public interface PlaceDataAccessObject {
+    @Query("Select * FROM places")
+        // 1. TO-DO
+    LiveData<List<Places>> loadAllPlaces();
 
-  // 1. TO-DO
-  void insertPlaces(Places place);
+    @Insert
+        // 1. TO-DO
+    void insertPlaces(Places place);
 
-  // 1. TO-DO
-  void updatePlaces(Places place);
+    @Update
+        // 1. TO-DO
+    void updatePlaces(Places place);
 
-  // 1. TO-DO
-  void deletePlaces(Places place);
+    @Delete
+        // 1. TO-DO
+    void deletePlaces(Places place);
 
-  // 1. TO-DO
-  LiveData<Places> getPlacesById(int id);
+    @Query("Select * from places where id = :id")
+        // 1. TO-DO
+    LiveData<Places> getPlacesById(int id);
 
 }

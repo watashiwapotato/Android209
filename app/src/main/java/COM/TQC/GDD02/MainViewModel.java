@@ -9,20 +9,19 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-public class MainViewModel extends AndroidViewModel
-{
-  private String TAG = "HIPPO_DEBUG";
-  private LiveData<List<Places>> placeList;
+public class MainViewModel extends AndroidViewModel {
+    private String TAG = "HIPPO_DEBUG";
+    private LiveData<List<Places>> placeList;
 
-  public MainViewModel(@NonNull Application application)
-  {
-    super(application);
-    // 3. TO-DO
-  }
+    public MainViewModel(@NonNull Application application) {
+        super(application);
+        // 3. TO-DO
+        DavidDataBase davidDataBase =DavidDataBase.getsInstance(getApplication().getApplicationContext());
+        placeList = davidDataBase.placeDao().loadAllPlaces();
+    }
 
-  public LiveData<List<Places>> getPlaceList()
-  {
-    return placeList;
-  }
+    public LiveData<List<Places>> getPlaceList() {
+        return placeList;
+    }
 
 }

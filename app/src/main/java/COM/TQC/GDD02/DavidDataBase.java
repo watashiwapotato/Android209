@@ -28,8 +28,7 @@ public abstract class DavidDataBase extends RoomDatabase
       synchronized (LOCK)
       {
         // 2. TO-DO
-
-
+          sInstance = Room.databaseBuilder(context,DavidDataBase.class,DATABASE_NAME).allowMainThreadQueries().build();
       }
     }
     Log.d(TAG,"getting the database instance:"+DATABASE_NAME);
